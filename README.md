@@ -2,15 +2,17 @@
 
 > Lab cá nhân, AI20K K5. Bạn gán nhãn phần tử đường theo guideline Road v1.0 trên CVAT của lớp: 12 ảnh camera trước BDD100K (A01–A12) và 8 ảnh fisheye WoodScape (B01–B08) là bắt buộc. Sau đó bạn kiểm lô của một bạn khác bằng Phiếu QC 1 và quyết định Release, Hold hoặc Rework. Nếu xong sớm, làm thêm ảnh A13–A16 và B09–B12 để lấy điểm thưởng. Không đưa ảnh lên app.cvat.ai.
 
-| M | Giờ | Việc | Lệnh kiểm tra |
-| --- | --- | --- | --- |
-| M0 | 13:00 | Điểm danh. Kiểm repo, gói 28 ảnh trong `data/`, đăng nhập CVAT và guideline đã đọc. | `PYTHONPATH=src python3 -m road_lab.road_check selftest` |
-| Task 0 | 13:15 | Mở project `d11-road-<tên>`, so sáu label và bốn label Tag với guideline. | `PYTHONPATH=src python3 -m road_lab.taxonomy` (in Raw labels JSON để so) |
-| Task 1 | 13:50 | Gán A01–A12, mỗi ảnh theo trọng tâm của nó; xong thì làm A13–A16. | — |
-| Task 2 | 15:05 | Gán B01–B08; xong thì làm B09–B12. Dành 5 phút cuối để self-QC. | — |
-| Task 3 | 15:40 | Đổi lô với bạn được ghép, điền Phiếu QC 1 ([`templates/qc1_form.md`](templates/qc1_form.md)). | — |
-| Export | 16:15 | Export CVAT for images 1.1 (không kèm ảnh), mở lại rồi nộp. | `PYTHONPATH=src python3 -m road_lab.road_check lint <tên>-front.zip <tên>-fisheye.zip` |
-| Buffer | 16:35 | Sửa lô theo phiếu nhận được. Tùy chọn: hoạt động row-anchor. | `PYTHONPATH=src python3 -m road_lab.rowanchor <tên>-front.zip --image A01` |
+| M      | Giờ  | Việc                                                                                                      | Lệnh kiểm tra                                                                            |
+| ------ | ----- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| M0     | 13:00 | Điểm danh. Kiểm repo, gói 28 ảnh trong `data/`, đăng nhập CVAT và guideline đã đọc.         | `PYTHONPATH=src python3 -m road_lab.road_check selftest`                                 |
+| Task 0 | 13:15 | Mở project `d11-road-<tên>`, so sáu label và bốn label Tag với guideline.                          | `PYTHONPATH=src python3 -m road_lab.taxonomy` (in Raw labels JSON để so)               |
+| Task 1 | 13:50 | Gán A01–A12, mỗi ảnh theo trọng tâm của nó; xong thì làm A13–A16.                               | —                                                                                         |
+| Task 2 | 15:05 | Gán B01–B08; xong thì làm B09–B12. Dành 5 phút cuối để self-QC.                                  | —                                                                                         |
+| Task 3 | 15:40 | Đổi lô với bạn được ghép, điền Phiếu QC 1 ([`templates/qc1_form.md`](templates/qc1_form.md)). | —                                                                                         |
+| Export | 16:15 | Export CVAT for images 1.1 (không kèm ảnh), mở lại rồi nộp.                                         | `PYTHONPATH=src python3 -m road_lab.road_check lint <tên>-front.zip <tên>-fisheye.zip` |
+| Buffer | 16:35 | Sửa lô theo phiếu nhận được. Tùy chọn: hoạt động row-anchor.                                   | `PYTHONPATH=src python3 -m road_lab.rowanchor <tên>-front.zip --image A01`              |
+
+### Link drive: [drive.google.com/drive/folders/1jxG3Ltb8po9dY8yyKGgH8lO7pBV2o11w?usp=drive_link](https://drive.google.com/drive/folders/1jxG3Ltb8po9dY8yyKGgH8lO7pBV2o11w?usp=drive_link)
 
 ## Cài đặt
 
